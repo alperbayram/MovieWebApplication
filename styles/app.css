@@ -1,0 +1,23 @@
+body{
+    color: black;
+    
+}
+a{
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+ text-decoration: underline;
+}
+
+#footer{
+     background-color: #032541;
+     position: relative;
+     bottom: 0;
+     width: 100%;
+     color:white;
+}
+#footer li>a{
+    color:white;
+}
