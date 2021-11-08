@@ -5,7 +5,7 @@ function Populer({ data }) {
     <div className="container">
       <div className="populer-movie">
         {data.results.map((movie) => (
-          <Link  href={`/movie/${movie.id}`}>
+          <Link href={`/movie/${movie.id}`}>
             <a className="populer-inner">
               <img
                 src={`https://www.themoviedb.org/t/p/w220_and_h330_face/${movie.poster_path}`}
@@ -30,9 +30,9 @@ function Populer({ data }) {
             .populer-inner {
               position: relative;
               margin: 5px;
-              text-decoration:none;
+              text-decoration: none;
             }
-            
+
             .title-movie {
               width: 100%;
               padding: 26px 10px 12px 10px;
@@ -63,4 +63,3 @@ function Populer({ data }) {
 }
 
 export default Populer;
-

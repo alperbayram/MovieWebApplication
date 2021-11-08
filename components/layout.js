@@ -23,10 +23,10 @@ function Layout({ children }) {
       <Nav />
       <main>{children}</main>
       <div id="footer">
-        <div className="container ">
-          <footer className="row row-cols-5 py-5 ">
-            <div className="col justify-content-end">
-              <a className="d-flex align-items-center mb-3 link-dark text-decoration-none">
+        <div className="container">
+          <footer className="row row-cols-1 row-cols-md-5 py-5 " >
+            <div className="col justify-content-end pb-3">
+              <a className="d-flex align-items-center mb-3 link-dark text-decoration-none d-none d-lg-block">
                 <img
                   src={
                     "https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
@@ -36,15 +36,14 @@ function Layout({ children }) {
                   height={94}
                 />
               </a>
-              <p className=" bg-white rounded text-center text-primary fs-5 fw-bold">
-                {" "}
+              <p className=" bg-white rounded text-center text-primary fs-6 fw-bold">
                 <Link href="https://github.com/alperbayram">
                   <a className="text-decoration-none">@alperbayram </a>
                 </Link>
               </p>
             </div>
 
-            <div className="col">
+            <div className="col pb-3">
               <h5>TEMEL</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
@@ -65,7 +64,7 @@ function Layout({ children }) {
               </ul>
             </div>
 
-            <div className="col">
+            <div className="col pb-3">
               <h5>KATKIDA BULUNUN</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
@@ -83,7 +82,7 @@ function Layout({ children }) {
               </ul>
             </div>
 
-            <div className="col">
+            <div className="col pb-3">
               <h5>TOPLULUK</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">
@@ -100,7 +99,7 @@ function Layout({ children }) {
                 </li>
               </ul>
             </div>
-            <div className="col">
+            <div className="col pb-3">
               <h5>YASAL</h5>
               <ul className="nav flex-column">
                 <li className="nav-item mb-2">

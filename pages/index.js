@@ -19,13 +19,13 @@ function HomePage({ data, top }) {
         ></link>
       </Head>
       <div className="container" id="homepage-background">
-        <div className="p-5 mb-4 rounded-3">
+        <div className=" mb-4 rounded-3">
           <div className="container-fluid py-5">
             <h1 className="display-5 fw-bold">Hoş Geldiniz.</h1>
             <p className="col-md-8 fs-4 fw-bold pb-4">
               Milyonlarca film, TV şovu ve keşfedilecek kişi. Şimdi keşfedin.
             </p>
-            <div class="input-group mb-3">
+            <label class="input-group ">
               <input
                 className="form-control rounded-pill"
                 id="homepage-input"
@@ -37,13 +37,13 @@ function HomePage({ data, top }) {
                 required
               />
               <button
-                class="btn btn-outline-white "
-                type="button"
+                class="btn btn-outline-white ms-auto "
+                type="submit"
                 id="button-addon2"
               >
                 Search
               </button>
-            </div>
+            </label>
           </div>
         </div>
       </div>
@@ -51,7 +51,7 @@ function HomePage({ data, top }) {
       <div className="container">
         <div className="d-flex">
           <h2 className="p-3">Populer Filmler</h2>
-          <div id="populer-film">
+          <div id="populer-film" className="d-none d-lg-block">
             <Link href="/">
               <a>Yayın Akışı</a>
             </Link>
@@ -73,7 +73,7 @@ function HomePage({ data, top }) {
       <div className="container pt-3 pb-3">
         <div className="d-flex">
           <h2 className=" p-3">Gösterimdeki Filmler</h2>
-          <div id="populer-film">
+          <div id="populer-film" className="d-none d-lg-block">
             <Link href="/">
               <a>Filmler</a>
             </Link>

@@ -11,30 +11,34 @@ function Nav() {
         <div className="container-fluid">
           <div className="col-12 d-flex justify-content-around">
             <div className="d-flex align-self-center fw-bold">
-              <a className="d-flex align-items-center navbar-brand">
-                <img
-                  src={
-                    "https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
-                  }
-                  alt="Picture"
-                  width={154}
-                  height={20}
-                />
-              </a>
               <Link href="/">
-                <a className="navbar-brand  text-white fs-6">Filmler</a>
+                <a className="d-flex align-items-center navbar-brand">
+                  <img
+                    src={
+                      "https://www.themoviedb.org/assets/2/v4/logos/v2/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg"
+                    }
+                    alt="Picture"
+                    width={154}
+                    height={20}
+                  />
+                </a>
               </Link>
-              <Link href="/about">
-                <a className="navbar-brand text-white fs-6">Diziler</a>
-              </Link>
-              <Link href="/">
-                <a className="navbar-brand text-white fs-6">Kişiler</a>
-              </Link>
-              <Link href="/about">
-                <a className="navbar-brand text-white fs-6">About</a>
-              </Link>
+              <div className="d-flex align-self-center fw-bold d-none d-sm-block">
+                <Link href="/">
+                  <a className="navbar-brand text-white fs-6">Filmler</a>
+                </Link>
+                <Link href="/about">
+                  <a className="navbar-brand text-white fs-6">Diziler</a>
+                </Link>
+                <Link href="/">
+                  <a className="navbar-brand text-white fs-6">Kişiler</a>
+                </Link>
+                <Link href="/about">
+                  <a className="navbar-brand text-white fs-6">About</a>
+                </Link>
+              </div>
             </div>
-            <div className="d-flex">
+            <div className="d-flex d-none d-lg-block">
               <Link href="/">
                 <span className="navbar-brand align-self-center ">
                   <svg

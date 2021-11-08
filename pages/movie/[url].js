@@ -11,17 +11,21 @@ export default function FilmDetay({ data, video }) {
       <div
         className="detail-background"
         style={{
-          backgroundImage: `url(https://www.themoviedb.org/t/p/original${data.backdrop_path})`,
+          backgroundImage: `linear-gradient(
+            to bottom,
+            rgba(3, 37, 65, 0.52),
+            rgb(255, 255, 255)
+          ),url(https://www.themoviedb.org/t/p/original${data.backdrop_path})`,
         }}
       ></div>
-      <div className="container" id="container-detail">
-        <div className="d-flex">
-          <div className="p-5">
+      <div className="container pb-5" id="container-detail">
+        <div className="row row-cols-1 row-cols-md-2 ">
+          <div className="pt-5 col text-center">
             <img
               src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2/${data.poster_path}`}
             />
           </div>
-          <div className="pt-5 ">
+          <div className="pt-5 col">
             <h3 className="">
               {data.title}({data.release_date.slice(0, 4)})
             </h3>
