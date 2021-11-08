@@ -38,7 +38,7 @@ Sunucuyu çalıştırın
 
 ## Kullanılan Teknolojiler
 
-**İstemci:** React, Nextjs, Bootstrap
+**İstemci:** React, Nextjs, Bootstrap, HTML5, CSS3
 
 
 
