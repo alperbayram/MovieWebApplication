@@ -1,9 +1,11 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import Populer from "../components/populer";
+import Link from "next/link";
 
-function HomePage({ data }) {
+function HomePage({ data, top }) {
   // console.log(data.results[0].title)
+  console.log(top.id);
   return (
     <Layout>
       <Head>
@@ -16,27 +18,75 @@ function HomePage({ data }) {
           crossorigin="anonymous"
         ></link>
       </Head>
-      <div className="container">
-        <div className="p-5 mb-4 bg-light rounded-3">
+      <div className="container" id="homepage-background">
+        <div className="p-5 mb-4 rounded-3">
           <div className="container-fluid py-5">
-            <h1 className="display-5 fw-bold">Custom jumbotron</h1>
-            <p className="col-md-8 fs-4">
-              Using a series of utilities, you can create this jumbotron, just
-              like the one in previous versions of Bootstrap. Check out the
-              examples below for how you can remix and restyle it to your
-              liking.
+            <h1 className="display-5 fw-bold">Hoş Geldiniz.</h1>
+            <p className="col-md-8 fs-4 fw-bold pb-4">
+              Milyonlarca film, TV şovu ve keşfedilecek kişi. Şimdi keşfedin.
             </p>
-            <button className="btn btn-primary btn-lg" type="button">
-              Example button
-            </button>
+            <div class="input-group mb-3">
+              <input
+                className="form-control rounded-pill"
+                id="homepage-input"
+                name="name"
+                type="text"
+                placeholder="Film, Dizi, Kişi Ara..."
+                autoComplete="name"
+                aria-describedby="button-addon2"
+                required
+              />
+              <button
+                class="btn btn-outline-white "
+                type="button"
+                id="button-addon2"
+              >
+                Search
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
       <div className="container">
-        <h3 className="bg-light p-3">Populer Filmler</h3>
-        <Populer data={data}></Populer>
+        <div className="d-flex">
+          <h2 className="p-3">Populer Filmler</h2>
+          <div id="populer-film">
+            <Link href="/">
+              <a>Yayın Akışı</a>
+            </Link>
+            <Link href="/">
+              <a>Televizyonda</a>
+            </Link>
+            <Link href="/">
+              <a>Kiralık</a>
+            </Link>
+            <Link href="/">
+              <a>Sinemalarda</a>
+            </Link>
+          </div>
+        </div>
+        <div className="scrollmenu">
+          <Populer data={data}></Populer>
+        </div>
       </div>
+      <div className="container pt-3 pb-3">
+        <div className="d-flex">
+          <h2 className=" p-3">Gösterimdeki Filmler</h2>
+          <div id="populer-film">
+            <Link href="/">
+              <a>Filmler</a>
+            </Link>
+            <Link href="/">
+              <a>TV</a>
+            </Link>
+          </div>
+        </div>
+        <div className="scrollmenu">
+          <Populer data={top}></Populer>
+        </div>
+      </div>
+
       <script
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -48,11 +98,17 @@ function HomePage({ data }) {
 
 export default HomePage;
 
-export async function getStaticProps(context) {
+export async function getServerSideProps(context) {
   const res = await fetch(
     `https://api.themoviedb.org/3/movie/popular?api_key=477fc8a92de235c971a39fa80fe88c92&language=en-US&page=1`
   );
   const data = await res.json();
+
+  const respons = await fetch(
+    `https://api.themoviedb.org/3/movie/now_playing?api_key=477fc8a92de235c971a39fa80fe88c92&language=en-US&page=1
+    `
+  );
+  const top = await respons.json();
 
   if (!data) {
     return {
@@ -61,6 +117,6 @@ export async function getStaticProps(context) {
   }
 
   return {
-    props: { data },
+    props: { data, top },
   };
 }
