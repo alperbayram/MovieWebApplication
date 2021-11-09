@@ -1,5 +1,5 @@
 
-#Movie Web Application
+## Movie Web Application
 
 The Movie DB (https://www.themoviedb.org/) aracılığıyla filmlerin listelendiği ve bu filmlerin detaylarını görebildiğimiz bir web uygulaması.
 
@@ -33,8 +33,6 @@ Sunucuyu çalıştırın
 ```bash
    url: http://localhost:3000
 ```
-
-
 
 ## Kullanılan Teknolojiler
 
