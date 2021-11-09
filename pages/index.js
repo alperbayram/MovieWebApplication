@@ -18,7 +18,7 @@ function HomePage({ data, top }) {
           crossorigin="anonymous"
         ></link>
       </Head>
-      <div className="container" id="homepage-background">
+      <div className="container p-5" id="homepage-background">
         <div className=" mb-4 rounded-3">
           <div className="container-fluid py-5">
             <h1 className="display-5 fw-bold">Hoş Geldiniz.</h1>
@@ -50,9 +50,9 @@ function HomePage({ data, top }) {
 
       <div className="container">
         <div className="d-flex">
-          <h2 className="p-3">Populer Filmler</h2>
+          <h2 className="p-3 fs-3">Populer Filmler</h2>
           <div id="populer-film" className="d-none d-lg-block">
-            <Link href="/">
+            <Link href="/" >
               <a>Yayın Akışı</a>
             </Link>
             <Link href="/">
@@ -72,7 +72,7 @@ function HomePage({ data, top }) {
       </div>
       <div className="container pt-3 pb-3">
         <div className="d-flex">
-          <h2 className=" p-3">Gösterimdeki Filmler</h2>
+          <h2 className="fs-3 p-3">Gösterimdeki Filmler</h2>
           <div id="populer-film" className="d-none d-lg-block">
             <Link href="/">
               <a>Filmler</a>
